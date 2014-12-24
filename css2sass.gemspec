@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'css-sass-scss'
-  s.version     = '0.0.4'
+  s.version     = '0.0.6'
   s.date        = '2014-12-22'
   s.summary     = "CSS-SASS-SCSS"
   s.description = <<-desc
@@ -17,7 +17,10 @@ Gem::Specification.new do |s|
   s.executables << 'css2sass'
   s.homepage    =
   'http://rubygems.org/gems/css2sass'
-  s.metadata = ['http://github.com/skandasoft/css-sass-css']
+  s.metadata = {
+    'source_url' => 'http://github.com/skandasoft/css-sass-css',
+    'issue_tracker' => 'http://github.com/skandasoft/css-sass-css/issues'
+   }
   s.license       = 'MIT'
   s.add_runtime_dependency 'sass', '>=3.4.9'
 end
