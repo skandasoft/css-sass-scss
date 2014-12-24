@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'css2sass'
+
+converter = CSS2SASS::Converter
+css = ''
+format = 'SASS'
+if ARGV[0] === 'SASS' or ARGV[0] === 'SCSS'
+format = ARGV.shift
+end
+if ARGV.length == 2
+  to = ARGV.pop
+end
+ARGF.each do|line|
+  css << line
+end
+if format === 'SASS'
+  print converter.to_sass(css,to)
+else
+  print converter.to_scss(css,to)
+end
